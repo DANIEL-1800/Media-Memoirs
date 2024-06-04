@@ -1,0 +1,237 @@
+* { /* fonte */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* nav bar */
+.logo {
+    width: 40%;
+    height: 40%;
+    display: block;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0);
+    transition: all 0.5s;
+}
+
+.logo:hover {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+ 
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px;
+    margin: 0 auto;
+    cursor: default;
+    background-color: #4043fd;
+    width: 100%;
+    border: 3px solid;
+    border-radius: 16px;
+    border-color: #ff330096;
+    box-shadow: 0 0 32px rgba(0, 0, 1, 0.5);
+}
+/* nav bar*/
+
+/* conteúdo da nav bar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 8px;    
+}
+
+nav ul li a { /* variação de cores */
+    text-decoration: none;
+    color: #cecece;
+    padding: 8px;
+    font-size: 16pt;
+    border-radius: 12px;
+    transition: all 0.5s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #75000096;
+    padding: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 1s;
+}
+/* conteúdo da nav bar */
+
+body { /* fundo com degradê */
+    margin: 0;
+    padding: 16px;
+    background-image: linear-gradient(to left, #d1592e, #280072,
+    #280072, #280072, #280072, #280072, #280072, #2f32cc);
+}
+
+h1 { /* linhas comuns */
+    color: #cecece;
+    cursor: default;
+}
+
+.titulo { /* titulos */
+    text-align: center;
+    margin: 3% auto;   
+}
+
+.background { /* fundo efetivo com conteúdo */
+    width: 85%;
+    height: 60%;
+    margin: 3% auto;
+    border: 1px solid black;
+    border-radius: 16px;
+    background: #292929;
+}
+
+.form { /* formulario */
+    width: 50%;
+    margin: 3% auto;
+    margin-block-end: 10%;
+    border: 2px solid #cecece;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: #292929;
+    padding: 32px;
+}
+
+.pergunta { /* perguntas do formulario */
+    margin-top: 16px;
+    color: #cecece;
+
+    input {
+        padding: 6px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.radioLogin {
+    margin-top: 16px;
+    color: #cecece;
+    padding: 6px;
+}
+
+/* botoes */
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao { /* botao confirmacao */
+    padding: 16px;
+    border: 2px solid #cecece;
+    color: #cecece;
+    background-color: #292929;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+    font-size: 12pt;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.botao:hover {
+    background-color: #595959;
+    border: 2px solid white;
+    color: white;
+    transition: all 1s;
+}
+
+.reset { /* botão reset */
+    padding: 16px;
+    border: 2px solid #cecece;
+    color: #cecece;
+    background-color: #292929;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+    font-size: 12pt;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.reset:hover {
+    background-color: #854b4b;
+    border: 2px solid white;
+    color: white;
+    transition: all 1s;
+}
+
+.btn { /* google login */
+    margin-top: 24px;
+    border: 2px solid #1d21f5;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    border: 2px solid white;
+    transition: all 1s;
+}
+/* botoes */
+
+/* ajustes tela de perfil do usuário */
+.perfil {
+    width: 8%;
+    height: 8%;
+    border: 3px solid #cecece;
+    border-radius: 50%;
+    margin: 2.5%;
+    cursor: default;
+    transition: all 0.5s;
+}
+
+.perfil:hover {
+    border-radius: 5%;
+    transition: all 0.5s;
+}
+
+.formPerfil {
+    width: 50%;
+    border: 2px solid #cecece;
+    border-radius: 12px;
+    display: flex;
+    background-color: #292929;
+    padding: 32px;
+    margin: 3% auto;
+}
+/* ajustes tela de perfil do usuário */
+
+/* home externo */
+.imgformA {
+    display: flex;
+    justify-content: center;
+}
+
+.imgform {
+    width: 50%;    
+}
+/* home externo */
+
+/* home interno */
+.imgform2 { 
+    width: 50%;
+}
+
+.textoAlinha {
+    display: flex;
+    justify-content: center;
+}
+/* home interno */

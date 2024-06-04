@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuário</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link href="css/estilo.css" rel="stylesheet" />
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header> <!-- Nav bar -->
+        <div class="container-fluid">
+            <div>
+                <a href="index.html"><img src="image/Media_Memoirs.png" alt="MediaMemoirs" class="logo"></a>
+            </div>
+            <div>
+                <nav>                
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="index.html">Início</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>       
+    </header>
+    <div class="background"> <!-- conteudo do site -->
+        <div>
+            <h1 class="titulo">Cadastro de Usuário📁</h1>
+            <div>
+                <form class="form" id="formUsuario"> <!-- area de registro -->
+                    <div class="pergunta form-group">
+                        <label for="nomeUsuario">Nome de Usuário:</label>
+                        <input type="text" id="nomeUsuario" name="nomeUsuario" required autofocus/>
+                    </div>
+                    
+                    <div class="pergunta form-group">
+                        <label for="email">Endereço de email:</label>
+                        <input type="email" id="email" name="email" required/>
+                    </div>
+
+                    <div class="pergunta form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required/>
+                    </div>
+
+                    <div class="pergunta form-group">
+                        <label for="nascimento">Nascimento: (Opcional)</label>
+                        <input type="date" id="nascimento" name="nascimento"/>
+                    </div>
+                    
+                    <div class="radioLogin">
+                        <label for="sexo">Sexo: (Opcional)</label>
+                        <div class="opcoes">
+                            <input type="radio" id="masculino" name="sexo" value="Masculino"/>
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" id="feminino" name="sexo" value="Feminino"/>
+                            <label for="feminino">Feminino</label>
+                        </div>
+                    </div>
+                    
+                    <div class="botoes"> <!-- botoes -->
+                        <button type="reset" class="reset">APAGAR</button>
+    
+                        <button type="submit" class="botao" id="salvar">SALVAR</button>                     
+                        </button>
+                    </div>
+
+                    <div id="mensagemAlerta"></div> <!-- ja possui conta -->
+                    <div class="my-4">
+                        <a href="login.html">Já possui uma conta? Efetue o login</a>
+                    </div>
+                </form>            
+            </div>           
+        </div>        
+    </div>
+        <!-- Carregando os scripts do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+        <!-- Carregamento dos scripts do projeto -->
+        <script src="js/firebase/firebase.js"></script>
+        <script src="js/firebase/authentication.js"></script>
+        <script src="js/util/alerta.js"></script>
+        <script src="js/view/usuario.js"></script>
+        <script src="js/view/login.js"></script>
+</body>
+</html>

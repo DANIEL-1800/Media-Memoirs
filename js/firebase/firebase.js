@@ -28,7 +28,7 @@ const firebaseConfig = {
   messagingSenderId: "139883590862",
   appId: "1:139883590862:web:10d744b499eb07f3d54c9f"
 };
-  
+
 /*
 * Nas regras do Realtime Database, informe:
 * {

@@ -19,7 +19,7 @@
     <link href="css/estilo.css" rel="stylesheet" />    
 </head>
 
-<body>
+<body onload="verificaLogado()">
     <header> <!-- Nav bar -->
         <div class="container-fluid">
             <div>
@@ -30,7 +30,9 @@
                     <ul>
                         <li><a href="home.html">Home</a></li>
                         <li><a href="cadastro.html">Cadastro</a></li>                        
-                        <li><a href="#">Logout❌</a></li>
+                        <li>
+                            <button class="logoutB" onclick="logoutFirebase()">Logout❌</button>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -44,7 +46,7 @@
                 </form>
             </div>
             <div>
-                <form class="form">                    
+                <form class="form">                
                 </form>
             </div>    
         </div>        

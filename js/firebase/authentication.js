@@ -30,18 +30,17 @@ const urlApp = window.location.href.replace(/\/[^\/]*$/, '');
 /**
  * novoUsuario.
  * Cria um novo usuário no Firebase.
- * @param {string} nomeUsuario nome do usuário // adicionado
  * @param {string} email e-mail do usuário
  * @param {string} senha Senha do usuário
  * @return {object} O usuário criado
  */
-function novoUsuario(nomeUsuario, email, senha) {
+function criarUsuario(email, senha) { 
   firebase
     .auth()
-    .createUserWithEmailAndPassword(nomeUsuario, email, senha) /* adicionado (nomeUsuario) */
+    .createUserWithEmailAndPassword(email, senha) /* adicionado (nomeUsuario) */
     .then((result) => {
       console.log(`Usuário Logado: ${JSON.stringify(result.user)}`)
-      window.location.href = `${urlApp}/home.html` //Direcionamos o usuário para a tela inicial
+      window.location.href = `home.html`; //Direcionamos o usuário para a tela inicial
     })
     .catch(error => {
       console.error(error.code)

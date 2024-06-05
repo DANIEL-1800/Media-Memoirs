@@ -16,10 +16,12 @@
     <!-- Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- CSS -->
-    <link href="css/estilo.css" rel="stylesheet" />    
+    <link href="css/estilo.css" rel="stylesheet" />
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body onload="verificaLogado()">
     <header> <!-- Nav bar -->
         <div class="container-fluid">
             <div>
@@ -41,6 +43,11 @@
             <div>
                 <form class="form" id="formUsuario"> <!-- area de registro -->
                     <div class="pergunta form-group">
+                        <label for="nomeUsuario">Nome de Usuário:</label>
+                        <input type="text" id="nomeUsuario" name="nomeUsuario" required autofocus/>
+                    </div>
+                    
+                    <div class="pergunta form-group">
                         <label for="email">Endereço de email:</label>
                         <input type="email" id="email" name="email" required/>
                     </div>
@@ -49,11 +56,27 @@
                         <label for="senha">Senha:</label>
                         <input type="password" id="senha" name="senha" required/>
                     </div>
+
+                    <div class="pergunta form-group">
+                        <label for="nascimento">Nascimento: (Opcional)</label>
+                        <input type="date" id="nascimento" name="nascimento"/>
+                    </div>
+                    
+                    <div class="radioLogin">
+                        <label for="sexo">Sexo: (Opcional)</label>
+                        <div class="opcoes">
+                            <input type="radio" id="masculino" name="sexo" value="Masculino"/>
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" id="feminino" name="sexo" value="Feminino"/>
+                            <label for="feminino">Feminino</label>
+                        </div>
+                    </div>
                     
                     <div class="botoes"> <!-- botoes -->
                         <button type="reset" class="reset">APAGAR</button>
     
-                        <button type="submit" class="botao" id="salvar">SALVAR</button>                
+                        <button type="submit" class="botao" id="salvar">SALVAR</button>                     
+                        </button>
                     </div>
 
                     <div id="mensagemAlerta"></div> <!-- ja possui conta -->
@@ -74,5 +97,6 @@
         <script src="js/firebase/authentication.js"></script>
         <script src="js/util/alerta.js"></script>
         <script src="js/view/usuario.js"></script>
+        <script src="js/view/login.js"></script>
 </body>
 </html>

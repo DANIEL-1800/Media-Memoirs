@@ -151,6 +151,49 @@ function verificaLogado() {
   });
 }
 
+// Função para exibir mensagem de alerta
+function mostrarAlerta(mensagem, tipo) {
+  // Criando elemento de mensagem
+  const alerta = document.createElement('div');
+  alerta.className = `alert alert-${tipo}`;
+  alerta.textContent = mensagem;
+
+  // Adicionando à página
+  document.body.appendChild(alerta);
+
+  // Removendo a mensagem após alguns segundos
+  setTimeout(() => {
+    alerta.remove();
+  }, 3000); // Remover após 3 segundos (ajuste conforme necessário)
+}
+
+// Função para atualizar informações do usuário
+function atualizarUsuario(email, senha) {
+  const user = firebase.auth().currentUser;
+
+  // Atualiza o e-mail do usuário
+  user.updateEmail(email).then(() => {
+    console.log('E-mail do usuário atualizado com sucesso');
+  }).catch((error) => {
+    console.error('Erro ao atualizar e-mail do usuário:', error);
+    mostrarAlerta('Erro ao atualizar informações. Por favor, tente novamente.', 'danger');
+  });
+
+  // Atualiza a senha do usuário
+  user.updatePassword(senha).then(() => {
+    console.log('Senha do usuário atualizada com sucesso');
+  }).catch((error) => {
+    console.error('Erro ao atualizar senha do usuário:', error);
+    mostrarAlerta('Erro ao atualizar informações. Por favor, tente novamente.', 'danger');
+  });
+
+  // Implemente o código para atualizar outras informações (nascimento, sexo, etc.)
+  // ...
+
+  // Redireciona o usuário após a atualização
+  window.location.href = 'perfil.html'; // Ajuste o redirecionamento conforme necessário
+}
+
 
 /**
  * errors.

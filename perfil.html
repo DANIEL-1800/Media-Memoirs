@@ -29,10 +29,7 @@
                 <nav>                
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="cadastro.html">Cadastro</a></li>                        
-                        <li>
-                            <button class="logoutB" onclick="logoutFirebase()">Logout❌</button>
-                        </li>
+                        <li><a href="cadastro.html">Cadastro</a></li>                   
                     </ul>
                 </nav>
             </div>
@@ -41,8 +38,15 @@
     <div class="background"> <!-- conteudo do site -->
         <div>
             <h1 class="titulo">Meu Perfil🗂️</h1>
-            <div class="meuPerfil">
-                <form class="formPerfil">                    
+            <div>
+                <form class="form">
+                    <div>
+                        <button class="logoutB" onclick="logoutFirebase()">Logout❌</button>
+                    </div>
+
+                    <div>
+                        <li><a class="atualizarP" href="atualizar.html">Atualizar Perfil</a></li>
+                    </div>
                 </form>
             </div>
             <div>
@@ -60,5 +64,6 @@
         <script src="js/firebase/firebase.js"></script>
         <script src="js/firebase/authentication.js"></script>
         <script src="js/util/alerta.js"></script>
+        <script src="js/view/script.js"></script>
 </body>
 </html>
